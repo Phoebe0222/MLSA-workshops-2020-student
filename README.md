@@ -5,20 +5,20 @@ The Python notebooks used in MLSA workshops.
 Following is the weekly schedule of our workshops. We will upload the content after we conduct the workshops. 
 
 
-| Week | Workshop Code | Content | Link |
-| - |:-------------:| :-----:| :-------------:|
-| 1 | PR01, PR03| Setting up + Intro to data analysis, Alternative ways of setting up | [Download](https://drive.google.com/open?id=1baE1gYimJcI3MHSCzv89NGTlO6AV2pZY) |
-| 2 | PR03      |  ML kickoff | Link will be provided after workshop |
-| 3 | SL01      |  Classification |
-| 4 | SL02      |  Regression |
-| 5 | DL01      |  Deep Neural Networks |
-| 6 | DL02      |  Convolutional Neural Networks |
-| 7 | DL03      |  Recurrent Neural Networks |
-| 8 | UL01      |  Unsupervised Learning-1 |
-| 9 | UL02      |  Unsupervised Learning-2 |
-| 10 | RL01     | Policy-Based (Policy Gradient) |
-| 11 | RL02     | Value-Based (DQN) |
-| 12 | RL03     | Policy & Value-Based (A3C) |
+| Week        | Workshop Code | Content | Link |
+| ----------- |:-------------:| :------:| :-------------:|
+| 1 (7 Aug)   | PR01, PR03    | Setting up + Intro to data analysis, Alternative ways of setting up | [Download](https://drive.google.com/open?id=1baE1gYimJcI3MHSCzv89NGTlO6AV2pZY) |
+| 2 (14 Aug)  | PR03          |  ML kickoff | Link will be provided after workshop |
+| 3 (21 Aug)  | SL01          |  Classification |
+| 4 (28 Aug)  | SL02          |  Regression |
+| 5 (4 Sep)   | DL01          |  Deep Neural Networks |
+| 6 (11 Sep)  | DL02          |  Convolutional Neural Networks |
+| 7 (18 Sep)  | DL03          |  Recurrent Neural Networks |
+| 8 (25 Sep)  | UL01          |  Unsupervised Learning-1 |
+| 9 (2 Oct)   | UL02          |  Unsupervised Learning-2 |
+| 10 (9 Oct)  | RL01          | Policy-Based (Policy Gradient) |
+| 11 (16 Oct) | RL02          | Value-Based (DQN) |
+| 12 (23 Oct) | RL03          | Policy & Value-Based (A3C) |
 
 
 Apart from the weekly structure, the entire content structure looks like this: 
