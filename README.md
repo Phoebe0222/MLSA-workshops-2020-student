@@ -24,27 +24,27 @@ Following is the weekly schedule of our workshops. We will upload the content af
 Apart from the weekly structure, the entire content structure looks like this: 
 
 ### Preliminary
-* [**workshop-PR01**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/Preliminary/workshop-PR01-SettingUp.ipynb), Setting up + Intro to data analysis
-* [**workshop-PR02**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/Preliminary/workshop-PR02-MLKickoff.ipynb), ML kickoff 
-* [**workshop-PR03-optional**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/Preliminary/workshop-PR03-Optional.ipynb), Alternative ways of setting up 
+* [**workshop-PR01**], Setting up + Intro to data analysis
+* [**workshop-PR02**], ML kickoff 
+* [**workshop-PR03-optional**], Alternative ways of setting up 
 
 ### Supervised Learning
-* [**workshop-SL01**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/supervised-learning/workshop-SL01-Classification.ipynb), Classification
-* [**workshop-SL02**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/supervised-learning/workshop-SL02-Regression.ipynb), Regression
+* [**workshop-SL01**], Classification
+* [**workshop-SL02**], Regression
 
 ### Deep Learning
-* [**workshop-DL01**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/Deep-Learning/workshop-DL01-DeepNeuralNetworks.ipynb), Deep Neural Networks
-* [**workshop-DL02**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/Deep-Learning/workshop-DL02-ConvolutionalNeuralNetworks.ipynb), Convolutional Neural Networks
-* [**workshop-DL03**](https://github.com/Phoebe0222/MLSA-workshops-2019/blob/master/Deep-Learning/workshop-DL03-RecurrentNeuralNetworks.ipynb), Recurrent Neural Networks
+* [**workshop-DL01**], Deep Neural Networks
+* [**workshop-DL02**], Convolutional Neural Networks
+* [**workshop-DL03**], Recurrent Neural Networks
 
 ### Unsupervised Learning
-* [**workshop-UL01**](https://github.com/Phoebe0222/MLSA-workshops-2019/tree/master/Unsupervised-Learning), Unsupervised Learning-1
-* [**workshop-UL02**](https://github.com/Phoebe0222/MLSA-workshops-2019/tree/master/Unsupervised-Learning), Unsupervised Learning-2
+* [**workshop-UL01**], Unsupervised Learning-1
+* [**workshop-UL02**], Unsupervised Learning-2
 
 ### Reinforcement Learning 
-* [**workshop-RL01**](), Policy-Based (Policy Gradient)
-* [**workshop-RL02**](), Value-Based (DQN)
-* [**workshop-RL03**](), Policy & Value-Based (A3C) 
+* [**workshop-RL01**], Policy-Based (Policy Gradient)
+* [**workshop-RL02**], Value-Based (DQN)
+* [**workshop-RL03**], Policy & Value-Based (A3C) 
 
 
 
