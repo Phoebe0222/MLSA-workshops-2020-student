@@ -7,7 +7,7 @@ Following is the weekly schedule of our workshops. We will upload the content af
 
 | Week | Workshop Code | Content | Link |
 | - |:-------------:| :-----:| :-------------:|
-| 1 | PR01, PR03| Setting up + Intro to data analysis, Alternative ways of setting up | [Download](https://drive.google.com/open?id=1kW6Znf89v5kMh2SD0kd0i55aHG82bz-D) |
+| 1 | PR01, PR03| Setting up + Intro to data analysis, Alternative ways of setting up | [Download](https://drive.google.com/open?id=1baE1gYimJcI3MHSCzv89NGTlO6AV2pZY) |
 | 2 | PR03      |  ML kickoff | Link will be provided after workshop |
 | 3 | SL01      |  Classification |
 | 4 | SL02      |  Regression |
