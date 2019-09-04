@@ -11,7 +11,7 @@ Following is the weekly schedule of our workshops. We will upload the content af
 | 2 | 14 Aug  | PR03          |  ML kickoff | [Download](https://drive.google.com/open?id=13Uvud4vTuXBQEoCqFii56sM_FjJ-VIT6) |
 | 3 | 21 Aug  | SL01          |  Classification | [Download](https://drive.google.com/open?id=1F9fGQBoED1txWdHbaxzNeVSBOb27eAkm) |
 | 4 | 28 Aug  | SL02          |  Regression | [Download](https://drive.google.com/open?id=1R18-nS5tNERv8342ncBOte2fcLMQ4ZsA)|
-| 5 | 4 Sep   | DL01          |  Deep Neural Networks | available after workshop|
+| 5 | 4 Sep   | DL01          |  Deep Neural Networks | [Download](https://drive.google.com/drive/folders/176srHStKNyHlpKyqUuw5DxhmaLH2U2Mm?usp=sharing)|
 | 6 | 11 Sep  | DL02          |  Convolutional Neural Networks |
 | 7 | 18 Sep  | DL03          |  Recurrent Neural Networks |
 | 8 | 25 Sep  | UL01          |  Unsupervised Learning-1 |
