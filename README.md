@@ -12,8 +12,8 @@ Following is the weekly schedule of our workshops. We will upload the content af
 | 3 | 21 Aug  | SL01          |  Classification | [Download](https://drive.google.com/open?id=1F9fGQBoED1txWdHbaxzNeVSBOb27eAkm) |
 | 4 | 28 Aug  | SL02          |  Regression | [Download](https://drive.google.com/open?id=1R18-nS5tNERv8342ncBOte2fcLMQ4ZsA)|
 | 5 | 4 Sep   | DL01          |  Deep Neural Networks | [Download](https://drive.google.com/drive/folders/176srHStKNyHlpKyqUuw5DxhmaLH2U2Mm?usp=sharing)|
-| 6 | 11 Sep  | DL02          |  Convolutional Neural Networks | [Download](https://drive.google.com/open?id=1JsESnrWEL2C_fpTZ1QZ5-m8r3_qNUHc2)
-| 7 | 18 Sep  | DL03          |  Recurrent Neural Networks |
+| 6 | 11 Sep  | DL02          |  Convolutional Neural Networks | [Download](https://drive.google.com/open?id=1JsESnrWEL2C_fpTZ1QZ5-m8r3_qNUHc2)|
+| 7 | 18 Sep  | DL03          |  Recurrent Neural Networks | [Download](https://drive.google.com/open?id=1CR6c91uSklnGK_bFMElItdkV_Y_gWQrD)|
 | 8 | 25 Sep  | UL01          |  Unsupervised Learning-1 |
 | 9 | 2 Oct   | UL02          |  Unsupervised Learning-2 |
 | 10 | 9 Oct  | RL01          | Policy-Based (Policy Gradient) |
