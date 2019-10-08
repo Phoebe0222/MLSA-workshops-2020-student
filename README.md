@@ -34,6 +34,7 @@ Apart from the weekly structure, the entire content structure looks like this:
 * [**workshop-DL01**], Deep Neural Networks
 * [**workshop-DL02**], Convolutional Neural Networks
 * [**workshop-DL03**], Recurrent Neural Networks
+* [**workshop-DL04-optional**], NLP and Word Embeddings
 
 ### Unsupervised Learning
 * [**workshop-UL01**], Unsupervised Learning
