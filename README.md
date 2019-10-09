@@ -15,7 +15,7 @@ Following is the weekly schedule of our workshops. We will upload the content af
 | 6 | 11 Sep  | DL02          |  Convolutional Neural Networks | [Download](https://drive.google.com/open?id=1JsESnrWEL2C_fpTZ1QZ5-m8r3_qNUHc2)|
 | 7 | 18 Sep  | DL03          |  Recurrent Neural Networks | [Download](https://drive.google.com/open?id=1CR6c91uSklnGK_bFMElItdkV_Y_gWQrD)|
 | 8 | 25 Sep  | UL01          |  Unsupervised Learning | [Download](https://drive.google.com/open?id=1QXmHLGAPRLNnIBPxmMrmEdKb7Deihp-R)|
-| 9 | 9 Oct   | RL01          | Intro to Reinforcement Learning + Model-Based (MDP) |
+| 9 | 9 Oct   | RL01          | Intro to Reinforcement Learning + Model-Based (MDP) | [Download](https://drive.google.com/open?id=1S45DnCEF4IBUjzHfFeB4om4hu93a8T62) |
 | 10 | 16 Oct | RL02          | Value-Based (DQN) |
 | 11 | 23 Oct | RL03          | Policy-Based (Policy Gradient) |
 
