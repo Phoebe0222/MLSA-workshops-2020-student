@@ -8,8 +8,8 @@ import gym
 import numpy as np
 from lake_envs import *
 # uncomment to check out stochastic/deterministic environments 
-env = gym.make("Deterministic-4x4-FrozenLake-v0")
-#env = gym.make("Stochastic-4x4-FrozenLake-v0")
+#env = gym.make("Deterministic-4x4-FrozenLake-v0")
+env = gym.make("Stochastic-4x4-FrozenLake-v0")
 
 '''
 	P: nested dictionary
