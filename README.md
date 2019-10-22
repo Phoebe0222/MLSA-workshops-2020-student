@@ -17,7 +17,7 @@ Following is the weekly schedule of our workshops. We will upload the content af
 | 8 | 25 Sep  | UL01          |  Unsupervised Learning | [Download](https://drive.google.com/open?id=1QXmHLGAPRLNnIBPxmMrmEdKb7Deihp-R)|
 | 9 | 9 Oct   | RL01          | Intro to Reinforcement Learning + Model-Based (MDP) | [Download](https://drive.google.com/open?id=1S45DnCEF4IBUjzHfFeB4om4hu93a8T62) |
 | 10 | 16 Oct | RL02          | Value-Based (DQN) | [Download](https://drive.google.com/open?id=1zzBpUchdwFfo1fzL_KJLxibOLaXgTgx8)|
-| 11 | 23 Oct | RL03          | Policy-Based (Policy Gradient) |
+| 11 | 23 Oct | RL03          | Policy-Based (Policy Gradient) |[Download](https://drive.google.com/open?id=1Fo6BJbsvd90gfeLUZ-zdDrKCEEQzVEg7)|
 
 Apart from the weekly structure, the entire content structure looks like this: 
 
