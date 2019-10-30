@@ -54,7 +54,12 @@ def build_mlp(
   """
   #######################################################
   #########   YOUR CODE HERE - 7-20 lines.   ############
-  return # TODO
+  with tf.variable_scope(scope):
+    x = mlp_input
+    for layer in range(n_layers):
+      x = tf.layers.dense(x, units = size, activation = tf.nn.relu)
+    output = tf.layers.dense(x, units = output_size, activation = output_activation)
+  return output
   #######################################################
   #########          END YOUR CODE.          ############
 
@@ -111,14 +116,15 @@ class PG(object):
     """
     #######################################################
     #########   YOUR CODE HERE - 8-12 lines.   ############
-    self.observation_placeholder = # TODO
+    # size is None to allow variable size of batches 
+    self.observation_placeholder = tf.placeholder(tf.float32, shape = (None,) + self.env.observation_space.shape)
     if self.discrete:
-      self.action_placeholder = # TODO
+      self.action_placeholder = tf.placeholder(tf.int32, shape = [None,])
     else:
-      self.action_placeholder = # TODO
+      self.action_placeholder = tf.placeholder(tf.float32, shape = [None, self.action_dim])
 
     # Define a placeholder for advantages
-    self.advantage_placeholder = # TODO
+    self.advantage_placeholder = tf.placeholder(tf.float32, shape = [None,])
     #######################################################
     #########          END YOUR CODE.          ############
 
@@ -173,14 +179,33 @@ class PG(object):
     #########   YOUR CODE HERE - 5-10 lines.   ############
 
     if self.discrete:
-      action_logits =         # TODO
-      self.sampled_action =   # TODO
-      self.logprob =          # TODO
+      action_logits = build_mlp(mlp_input = self.observation_placeholder, 
+                                output_size = self.action_dim, 
+                                scope = scope, 
+                                n_layers = self.config.n_layers, 
+                                size = self.config.layer_size, 
+                                output_activation=self.config.activation)
+      self.sampled_action = tf.squeeze(tf.multinomial(logits = action_logits, num_samples = 1)) 
+      # an array of actions sampled from the emprical dist., shape = [batch_size]
+      self.logprob = - tf.nn.sparse_softmax_cross_entropy_with_logits(
+                                labels = self.action_placeholder,
+                                logits = action_logits)
     else:
-      action_means =          # TODO
-      log_std =               # TODO
-      self.sampled_action =   # TODO
-      self.logprob =          # TODO
+      action_means = build_mlp(mlp_input = self.observation_placeholder, 
+                                output_size = self.action_dim, 
+                                scope = scope, 
+                                n_layers = self.config.n_layers, 
+                                size = self.config.layer_size, 
+                                output_activation=self.config.activation)
+      std = tf.get_variable(initializer=tf.zero_initializer(), 
+                                dtype=tf.float32, name="std", 
+                                shape=[1,self.action_dim], trainable=True)
+      self.sampled_action =  tf.random_normal(
+                                shape = (1,),
+                                mean = action_means,
+                                stddev = std,
+                                dtype=tf.float32)
+      self.logprob = tf.contrib.distributions.MultivariateNormalDiag(action_means,log_std).prob(self.action_placeholder)
     #######################################################
     #########          END YOUR CODE.          ############
 
@@ -201,7 +226,7 @@ class PG(object):
 
     ######################################################
     #########   YOUR CODE HERE - 1-2 lines.   ############
-    self.loss = # TODO
+    self.loss = tf.reduce_mean(-self.logprob * self.advantage_placeholder) # average for a batch for all actions 
     #######################################################
     #########          END YOUR CODE.          ############
 
@@ -212,7 +237,7 @@ class PG(object):
     """
     ######################################################
     #########   YOUR CODE HERE - 1-2 lines.   ############
-    self.train_op = # TODO
+    self.train_op = tf.train.AdamOptimizer(self.lr).minimize(self.loss)
     #######################################################
     #########          END YOUR CODE.          ############
 
@@ -241,9 +266,17 @@ class PG(object):
     """
     ######################################################
     #########   YOUR CODE HERE - 4-8 lines.   ############
-    self.baseline = # TODO
-    self.baseline_target_placeholder = # TODO
-    self.update_baseline_op = # TODO
+    self.baseline = build_mlp(mlp_input = self.observation_placeholder, 
+                              output_size = 1, 
+                              scope = scope, 
+                              n_layers = self.config.n_layers, 
+                              size = self.config.layer_size, 
+                              output_activation=None)
+    self.baseline_target_placeholder = tf.placeholder(tf.float32, shape=[None,])
+    loss = tf.losses.mean_squared_error(
+                              labels = self.baseline_target_placeholder,
+                              predictions = tf.squeeze(self.baseline))
+    self.update_baseline_op = tf.train.AdamOptimizer(self.lr).minimize(loss)
     #######################################################
     #########          END YOUR CODE.          ############
 
@@ -433,7 +466,14 @@ class PG(object):
       rewards = path["reward"]
       #######################################################
       #########   YOUR CODE HERE - 5-10 lines.   ############
-      returns = # TODO
+      returns = [] # records returns at each time step 
+      pisode_len = len(rewards)
+      for t in range(pisode_len):
+        tail_length = episode_len - time_step
+        gammas = np.logspace(0, tail_length, num=tail_length, base=self.config.gamma, endpoint=False)
+        return_t = np.multiply(rewards[time_step:],gammas)
+        return_t = return_t.sum()
+        returns.append(return_t)
       #######################################################
       #########          END YOUR CODE.          ############
       all_returns.append(returns)
@@ -472,9 +512,15 @@ class PG(object):
     #######################################################
     #########   YOUR CODE HERE - 5-10 lines.   ############
     if self.config.use_baseline:
-      # TODO
+      baselines = self.sess.run(
+                self.baseline,
+                feed_dict={
+                    self.observation_placeholder: observations
+                }
+            )
+      adv -= baselines.squeeze()
     if self.config.normalize_advantage:
-      # TODO
+      adv = (adv - adv.mean()) / adv.std()
     #######################################################
     #########          END YOUR CODE.          ############
     return adv
@@ -492,7 +538,13 @@ class PG(object):
     """
     #######################################################
     #########   YOUR CODE HERE - 1-5 lines.   ############
-    pass # TODO
+    self.sess.run(
+            self.update_baseline_op,
+            feed_dict={
+                self.observation_placeholder: observations,
+                self.baseline_target_placeholder: returns
+            }
+        )
     #######################################################
     #########          END YOUR CODE.          ############
 
