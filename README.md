@@ -8,9 +8,9 @@ Following is the weekly schedule of our workshops. We will upload the content af
 | Week | Workshop Code | Content | Link |
 | :--:|:-------------:| :------:| :-------------:|
 | 1 | PR01, PR03    | Setting up + Intro to data analysis, Alternative ways of setting up | [Download](https://drive.google.com/open?id=1baE1gYimJcI3MHSCzv89NGTlO6AV2pZY) |
-| 2 | PR03          |  ML kickoff | |
-| 3 | SL01          |  Classification |  |
-| 4 | SL02          |  Regression | |
+| 2 | PR03          |  ML kickoff | [Download](https://drive.google.com/open?id=13Uvud4vTuXBQEoCqFii56sM_FjJ-VIT6) |
+| 3 | SL01          |  Classification | [Download](https://drive.google.com/open?id=1F9fGQBoED1txWdHbaxzNeVSBOb27eAkm) |
+| 4 | SL02          |  Regression |[Download](https://drive.google.com/open?id=1R18-nS5tNERv8342ncBOte2fcLMQ4ZsA) |
 | 5 | DL01          |  Deep Neural Networks | |
 | 6 | DL02          |  Convolutional Neural Networks | |
 | 7 | DL03          |  Recurrent Neural Networks | |
